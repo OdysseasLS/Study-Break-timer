@@ -8,18 +8,21 @@ def main():
     break_time *= 60
     take_break, back_to_work = make_notifs(study_time, break_time)
     run = True
+    print("Started successfully! Happy studying :D!")
     while run:
         time.sleep(study_time)
         take_break.send(block=False)
+        print("break msg sent")
         time.sleep(break_time)
         back_to_work.send(block=False)
+        print("work msg sent")
 
 
 def make_notifs(study_time, break_time):
     # Notification to take a break
     take_break = Notify()
     take_break.title = "Time for a break!"
-    take_break.message = f"You've been studying for {study_time/60} minutes. Take a {break_time/60} break!"
+    take_break.message = f"You've been studying for {str(study_time/60)} minutes. Take a {str(break_time/60)} break!"
     take_break.icon = "brk_icon.jpeg"
     take_break.audio = "sound.wav"
 
