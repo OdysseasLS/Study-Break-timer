@@ -22,7 +22,7 @@ def make_notifs(study_time, break_time):
     # Notification to take a break
     take_break = Notify()
     take_break.title = "Time for a break!"
-    take_break.message = f"You've been studying for {str(study_time/60)} minutes. Take a {str(break_time/60)} break!"
+    take_break.message = f"You've been studying for {str(study_time//60)} minutes. Take a {str(break_time//60)} break!"
     take_break.icon = "brk_icon.jpeg"
     take_break.audio = "sound.wav"
 
