@@ -1,6 +1,9 @@
 from notifypy import Notify
 import time
 
+# GUI with tkninter
+import tkinter as tk
+
 
 def main():
     study_time, break_time = get_input()
@@ -32,7 +35,7 @@ def make_notifs(study_time, break_time):
     # Notification to take a break
     take_break = Notify()
     take_break.title = "Time for a break!"
-    take_break.message = f"You've been studying for {str(study_time//60)} minutes. Take a {str(break_time//60)} break!"
+    take_break.message = f"You've been studying for {int(study_time//60)} minutes. Take a {int(break_time//60)} break!"
     take_break.icon = "brk_icon.jpeg"
     take_break.audio = "sound.wav"
 
@@ -50,6 +53,10 @@ def get_input():
     study_time = float(input("How long do you want to study for? (in minutes) "))
     break_time = float(input("How long do you want to break for? (in minutes) "))
     return study_time, break_time
+
+
+def make_gui():
+    pass
 
 
 if __name__ == '__main__':
