@@ -1,7 +1,5 @@
 from notifypy import Notify
 import time
-
-# GUI with tkninter
 import tkinter as tk
 
 
@@ -53,10 +51,6 @@ def get_input():
     study_time = float(input("How long do you want to study for? (in minutes) "))
     break_time = float(input("How long do you want to break for? (in minutes) "))
     return study_time, break_time
-
-
-def make_gui():
-    pass
 
 
 if __name__ == '__main__':
