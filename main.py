@@ -27,22 +27,22 @@ def make_notifs(study_time, break_time):
     starting = Notify()
     starting.title = "Study Timer Deployed!"
     starting.message = f"I've been deployed at {time.ctime()}. I'll notify you when it's time to take a break."
-    starting.icon = "letsgo.jpeg"
-    starting.audio = "sound.wav"
+    starting.icon = "assets/img/letsgo.jpeg"
+    starting.audio = "assets/sounds/sound.wav"
 
     # Notification to take a break
     take_break = Notify()
     take_break.title = "Time for a break!"
     take_break.message = f"You've been studying for {int(study_time//60)} minutes. Take a {int(break_time//60)} break!"
-    take_break.icon = "brk_icon.jpeg"
-    take_break.audio = "sound.wav"
+    take_break.icon = "assets/img/brk_icon.jpeg"
+    take_break.audio = "assets/sounds/sound.wav"
 
     # Notification to get back to work
     back_to_work = Notify()
     back_to_work.title = "Back to work!"
     back_to_work.message = f"Your break is over. Get THE FUCK back to work!"
-    back_to_work.icon = "btw_icon.jpg"
-    back_to_work.audio = "sound.wav"
+    back_to_work.icon = "assets/img/btw_icon.jpg"
+    back_to_work.audio = "assets/sounds/sound.wav"
 
     return starting, take_break, back_to_work
 
