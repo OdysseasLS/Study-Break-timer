@@ -1,4 +1,4 @@
-module OdysseasLS
+module github.com/OdysseasLS/Study-Break-timer
 
 go 1.21.5
 
