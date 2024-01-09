@@ -16,27 +16,22 @@ func get_input() (int, int) {
 	return study_time, break_time
 }
 
-func send_notif(study_time, break_time int) {
-	//make the notifications
-	starting := beeep.Notify("Study Timer Deployed!", "I've been deployed at" + time.Now().Format("15:04:05") + " I will notify you when it is time to take a break.", "assets/img/letsgo.jpeg")
-	take_break := beep.
-
-	return starting, take_break, back_to_work
-}
-
 func main() {
 	var study_time, break_time int = get_input()
 	study_time = study_time * 60
 	break_time = break_time * 60
+
+	beeep.Notify("Study Timer Deployed!", "I've been deployed at "+time.Now().Format("15:04:05")+" I will notify you when it is time to take a break.", "assets/img/letsgo.jpeg")
 	fmt.Println("Started successfully! Happy studying!")
-	// print time
+	fmt.Println(time.Now().Format("15:04:05"))
 	for run := true; run; {
 		//wait study_time
 		time.Sleep(time.Duration(study_time) * time.Second)
 		//send notif
-		starting
+		beeep.Notify("Time for a break!", "You've been studying for "+string(study_time/60)+"minutes. Take a "+string(break_time/60)+" minute break!", "assets/img/brk_icon.jpeg")
 		//wait break_time
 		time.Sleep(time.Duration(break_time) * time.Second)
 		//send notif
+		beeep.Notify("Back to work!", "Your break is over. Get THE FUCK back to work!", "assets/img/btw_icon.jpg")
 	}
 }
