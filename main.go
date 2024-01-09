@@ -28,7 +28,7 @@ func main() {
 		//wait study_time
 		time.Sleep(time.Duration(study_time) * time.Second)
 		//send notif
-		beeep.Notify("Time for a break!", "You've been studying for "+string(study_time/60)+"minutes. Take a "+string(break_time/60)+" minute break!", "assets/img/brk_icon.jpeg")
+		beeep.Notify("Time for a break!", "You've been studying for "+fmt.Sprint(study_time/60)+"minutes. Take a "+fmt.Sprint(break_time/60)+" minute break!", "assets/img/brk_icon.jpeg")
 		//wait break_time
 		time.Sleep(time.Duration(break_time) * time.Second)
 		//send notif
