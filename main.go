@@ -9,9 +9,9 @@ import (
 
 func get_input() (int, int) {
 	var study_time, break_time int
-	fmt.Println("How long do you want to study for? (in minutes) ")
+	fmt.Print("How long do you want to study for? (in minutes): ")
 	fmt.Scanln(&study_time)
-	fmt.Println("How long do you want to break for? (in minutes) ")
+	fmt.Print("How long do you want to break for? (in minutes): ")
 	fmt.Scanln(&break_time)
 	return study_time, break_time
 }
